@@ -1,0 +1,5 @@
+# 本 bundle 的 loader 层：把 codex-approvals 作为一个新条目插入 profile。
+# 形式与 shipped 的 @deepseek-ai/dsh-experimental-auto-review 保持一致。
+- insert:
+    - id: codex-approvals
+      name: 'dsh-codex-approvals'

@@ -1,0 +1,62 @@
+{
+  "name": "dsh-codex-approvals",
+  "version": "0.1.0",
+  "description": "Codex-style auto-approval for DeepSeek Harness: keep the sandbox, and auto-decide only the approval requests that would otherwise interrupt you.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./rules": "./lib/rules.js",
+    "./policy": "./lib/policy.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/rules.js",
+    "lib/policy.js",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "approval",
+    "sandbox",
+    "permissions",
+    "agent"
+  ],
+  "license": "MIT",
+  "author": "Finn-dz",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Finn-dz/dsh-codex-approvals.git"
+  },
+  "homepage": "https://github.com/Finn-dz/dsh-codex-approvals#readme",
+  "bugs": {
+    "url": "https://github.com/Finn-dz/dsh-codex-approvals/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test test/logic.test.mjs"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "~4.0.4",
+    "@deepseek-ai/dsh-user-approval": "0.2.0-rc.2"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh-llm": {
+      "optional": true
+    }
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
